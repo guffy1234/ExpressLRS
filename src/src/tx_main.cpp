@@ -377,6 +377,9 @@ void SetRFLinkRate(uint8_t index) // Set speed of RF link
 #if defined(RADIO_LR1121)
                , (ModParams->radio_type == RADIO_TYPE_LR1121_GFSK_900 || ModParams->radio_type == RADIO_TYPE_LR1121_GFSK_2G4), (uint8_t)UID[5], (uint8_t)UID[4]
 #endif
+#if defined(RADIO_SX126X)
+               , false, (uint8_t)UID[5], (uint8_t)UID[4]
+#endif
                );
 
 #if defined(RADIO_LR1121)

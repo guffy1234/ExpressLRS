@@ -38,6 +38,8 @@ def build_html(mainfile, var, out, env, isTX=False):
         chip = 'SX128X'
     elif '-DRADIO_SX127X=1' in env['BUILD_FLAGS']:
         chip = 'SX127X'
+    elif '-DRADIO_SX126X=1' in env['BUILD_FLAGS']:
+        chip = 'SX126X'        
     elif '-DRADIO_LR1121=1' in env['BUILD_FLAGS']:
         chip = 'LR1121'
     if 'ESP8285' in env['PIOENV']:
