@@ -8,7 +8,7 @@
 #if defined(RADIO_LR1121)
 #include "LR1121Driver.h"
 #elif defined(RADIO_SX126X)
-#include "SX126xDriver.h"
+#include "SX1262Driver.h"
 #else
 #include "SX127xDriver.h"
 #endif

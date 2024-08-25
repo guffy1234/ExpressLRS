@@ -10,7 +10,7 @@
 #if defined(RADIO_SX127X)
 #include "SX127xDriver.h"
 #elif defined(RADIO_SX126X)
-#include "SX126xDriver.h"
+#include "SX1262Driver.h"
 #elif defined(RADIO_LR1121)
 #include "LR1121Driver.h"
 #elif defined(RADIO_SX128X)

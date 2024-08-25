@@ -6,7 +6,7 @@
 #if defined(RADIO_SX127X)
 #include "SX127xDriver.h"
 #elif defined(RADIO_SX126X)
-#include "SX126xDriver.h"
+#include "SX1262Driver.h"
 #elif defined(RADIO_LR1121)
 #include "LR1121Driver.h"
 #elif defined(RADIO_SX128X)
@@ -160,7 +160,7 @@ typedef struct expresslrs_mod_settings_s
     uint8_t sf;
     uint8_t cr;
     uint8_t PreambleLen;
-#if defined(RADIO_LR1121) || defined(RADIO_SX126X)
+#if defined(RADIO_LR1121)
     uint8_t bw2;
     uint8_t sf2;
     uint8_t cr2;
@@ -281,11 +281,10 @@ enum eAuxChannels : uint8_t
 extern SX127xDriver Radio;
 
 #elif defined(RADIO_SX126X)
-#define RATE_MAX 16
+#define RATE_MAX 6
 #define RATE_BINDING RATE_LORA_50HZ
-#define RATE_DUALBAND_BINDING 9 // 2.4GHz 50Hz
 
-extern SX126xDriver Radio;
+extern SX1262Driver Radio;
 
 #elif defined(RADIO_LR1121)
 #define RATE_MAX 16
